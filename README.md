@@ -64,30 +64,32 @@ $ java -jar SentenceSplitter.jar file_with_sentences_not_splitted.txt es-sentenc
 
 ## Model creation
 To create this sentence splitting model, we used the following training parameters (class "TrainingParameters" in OpenNLP) to get the best performance:
-- Number of iterations: 4000
-- Cutoff parameter: 3
-- Trainer type parameter: EventTrainer.EVENT_VALUE
-- Algorithm: Maximum Entropy (ModelType.MAXENT.name())
+- Number of iterations: 4000.
+- Cutoff parameter: 3.
+- Trainer type parameter: `EventTrainer.EVENT_VALUE`.
+- Algorithm: Maximum Entropy (`ModelType.MAXENT.name()`).
 
 Meanwhile, we used the following parameters for the sentence split builder (class "SentenceDetectorFactory" in OpenNLP) to get the best performance:
-- Subclass name: null value
-- Language code: "es" (for Spanish)
-- Use token end: true
-- Abbreviation dictionary: file "abbreviations.dat" (included in the src/ directory)
-- End of file characters: ".", "?" and "!"
+- Subclass name: null value.
+- Language code: "es" (for Spanish).
+- Use token end: true.
+- Abbreviation dictionary: file "abbreviations.dat" (included in the src/ directory).
+- End of file characters: ".", "?" and "!".
 
 ## Model evaluation
 
 After tuning the model using different values for each parameter mentioned above, we got the best performance with the values mentioned above.
 
-| Number of sentences in the gold standard | 1445  |
-| Number of sentences generated | 1447  |
-| Number of sentences correctly splitted | 1428    |
-| Number of sentences wrongly splitted |  12  |
-| ------ | ---- |
-| Precision | 98.69% |
-| Recall | 98.82% |
-| F-Measure | 98.75% |
+| Number of sentences in the gold standard | 1445   |
+| Number of sentences generated            | 1447   |
+| Number of sentences correctly splitted   | 1428   |
+| Number of sentences wrongly splitted     | 12     |
+| ---------------------------------------- | ------ |
+| Precision                                | 98.69% |
+| Recall                                   | 98.82% |
+| F-Measure                                | 98.75% |
+
+Table 1: Evaluation statistics for the sentence splitting model.
 
 
 ## Contact
