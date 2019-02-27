@@ -86,6 +86,7 @@ After tuning the model using different values for each parameter mentioned above
 | Number of sentences generated            | 1447   |
 | Number of sentences correctly splitted   | 1428   |
 | Number of sentences wrongly splitted     | 12     |
+| Number of sentences missed     | 7     |
 | **Precision**                                | **98.69%** |
 | **Recall**                                   | **98.82%** |
 | **F-Measure**                                | **98.75%**|
