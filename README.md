@@ -81,7 +81,7 @@ Meanwhile, we used the following parameters for the sentence split builder (clas
 After tuning the model using different values for each parameter mentioned above, we got the best performance with the values mentioned above.
 
 |      | Value |
-| ---------------------------------------- | ------ |
+| ----------------------------------------: | :------ |
 | Number of sentences in the gold standard | 1445   |
 | Number of sentences generated            | 1447   |
 | Number of sentences correctly splitted   | 1428   |
