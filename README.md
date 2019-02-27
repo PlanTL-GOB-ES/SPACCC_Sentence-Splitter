@@ -47,9 +47,9 @@ train_set_docs/
 </pre>
 
 ## Usage
-The executable file "SentenceSplitter.jar" is the program you need to split the sentences of the document. For this program, two arguments are needed: (1) the text file to split the sentences, and (2) the model file ("es-sentence-splitter-model-spaccc.bin"). The program will display all sentences splitted in the terminal, with one sentence per line.
+The executable file *SentenceSplitter.jar* is the program you need to split the sentences of the document. For this program, two arguments are needed: (1) the text file to split the sentences, and (2) the model file (*es-sentence-splitter-model-spaccc.bin*). The program will display all sentences splitted in the terminal, with one sentence per line.
 
-From the "exec" folder, type the following command in your terminal:
+From the `exec` folder, type the following command in your terminal:
 
 <pre>
 $ java -jar SentenceSplitter.jar INPUT_FILE MODEL_FILE
@@ -63,28 +63,29 @@ $ java -jar SentenceSplitter.jar file_with_sentences_not_splitted.txt es-sentenc
 </pre>
 
 ## Model creation
-To create this sentence splitting model, we used the following training parameters (class "TrainingParameters" in OpenNLP) to get the best performance:
+To create this sentence splitting model, we used the following training parameters (class *TrainingParameters* in OpenNLP) to get the best performance:
 - Number of iterations: 4000.
 - Cutoff parameter: 3.
-- Trainer type parameter: `EventTrainer.EVENT_VALUE`.
-- Algorithm: Maximum Entropy (`ModelType.MAXENT.name()`).
+- Trainer type parameter: *EventTrainer.EVENT_VALUE*.
+- Algorithm: Maximum Entropy (*ModelType.MAXENT.name()*).
 
-Meanwhile, we used the following parameters for the sentence split builder (class "SentenceDetectorFactory" in OpenNLP) to get the best performance:
+Meanwhile, we used the following parameters for the sentence split builder (class *SentenceDetectorFactory* in OpenNLP) to get the best performance:
 - Subclass name: null value.
-- Language code: "es" (for Spanish).
+- Language code: *es* (for Spanish).
 - Use token end: true.
-- Abbreviation dictionary: file "abbreviations.dat" (included in the src/ directory).
+- Abbreviation dictionary: file "abbreviations.dat" (included in the `src/` directory).
 - End of file characters: ".", "?" and "!".
 
 ## Model evaluation
 
 After tuning the model using different values for each parameter mentioned above, we got the best performance with the values mentioned above.
 
+|      | Value |
+| ---------------------------------------- | ------ |
 | Number of sentences in the gold standard | 1445   |
 | Number of sentences generated            | 1447   |
 | Number of sentences correctly splitted   | 1428   |
 | Number of sentences wrongly splitted     | 12     |
-| ---------------------------------------- | ------ |
 | Precision                                | 98.69% |
 | Recall                                   | 98.82% |
 | F-Measure                                | 98.75% |
