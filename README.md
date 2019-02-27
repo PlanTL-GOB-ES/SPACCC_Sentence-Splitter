@@ -20,13 +20,14 @@ The library file we have used to compile is "opennlp-tools-1.8.4.jar". The sourc
 ## Directory structure
 <pre>
 exec/
-  An executable file that can be used to apply the sentence splitter to your documents. You can find the notes about its execution below in section "_USAGE".
+  An executable file that can be used to apply the sentence splitter to your documents. 
+  You can find the notes about its execution below in section "Usage".
 
 gold_standard/
   The clinical cases used as gold standard to evaluate the model's performance.
   
 model/
-  The sentence splitting model, a binary file.
+  The sentence splitting model, "es-sentence-splitter-model-spaccc.bin", a binary file.
   
 src/
   The source code to create the model (CreateModelSS.java) and evaluate it (EvaluateModelSS.java). 
@@ -46,6 +47,20 @@ train_set_docs/
 </pre>
 
 ## Usage
+The executable file "SentenceSplitter.jar" is the program you need to split the sentences of the document. For this program, two arguments are needed: (1) the text file to split the sentences, and (2) the model file ("es-sentence-splitter-model-spaccc.bin"). The program will display all sentences splitted in the terminal, with one sentence per line.
+
+From the "exec" folder, type the following command in your terminal:
+
+<pre>
+$ java -jar SentenceSplitter.jar INPUT_FILE MODEL_FILE
+</pre>
+
+## Examples
+
+Assuming you have the executable file, the input file and the model file in the same directory:
+<pre>
+$ java -jar SentenceSplitter.jar file_with_sentences_not_splitted.txt es-sentence-splitter-model-spaccc.bin
+</pre>
 
 ## Model creation
 
