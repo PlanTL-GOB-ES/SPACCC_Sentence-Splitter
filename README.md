@@ -15,7 +15,7 @@ This software has been compiled with Java SE 1.8 and it should work with recent 
 
 The executable file already includes the Apache OpenNLP dependencies inside, so the download of this toolkit is not necessary. However, you may download the latest version from this website: https://opennlp.apache.org/download.html
 
-The library file we have used to compile is "opennlp-tools-1.8.4.jar". The source code should be able to compile with the latest version of OpenNLP, "opennlp-tools-RELEASE_NUMBER.jar". In case there are compilation or execution errors, please let us know and we will make all the necessary updates.
+The library file we have used to compile is "opennlp-tools-1.8.4.jar". The source code should be able to compile with the latest version of OpenNLP, "opennlp-tools-*RELEASE_NUMBER*.jar". In case there are compilation or execution errors, please let us know and we will make all the necessary updates.
 
 ## Directory structure
 <pre>
