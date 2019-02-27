@@ -88,7 +88,7 @@ After tuning the model using different values for each parameter mentioned above
 | Number of sentences wrongly splitted     | 12     |
 | **Precision**                                | **98.69%** |
 | **Recall**                                   | **98.82%** |
-| **F-Measure**                                | **98.75% **|
+| **F-Measure**                                | **98.75%**|
 
 Table 1: Evaluation statistics for the sentence splitting model.
 
