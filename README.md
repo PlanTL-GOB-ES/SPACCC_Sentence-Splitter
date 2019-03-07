@@ -1,5 +1,10 @@
 # The Sentence Splitter (SS) for Clinical Cases Written in Spanish
 
+
+## Digital Object Identifier (DOI) and access to dataset files
+
+https://doi.org/10.5281/zenodo.2586995
+
 ## Introduction
 This repository contains the sentence splitting model trained using the SPACCC_SPLIT corpus (https://github.com/PlanTL-SANIDAD/SPACCC_SPLIT). The model was trained using the 90% of the corpus (900 clinical cases) and tested against the 10% (100 clinical cases). This model is a great resource to split sentences in biomedical documents, specially clinical cases written in Spanish. This model obtains a F-Measure of 98.75%.
 
